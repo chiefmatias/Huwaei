@@ -93,7 +93,7 @@ def function_2q(graph, source, target):
                 neighbor_not_in_queue = neighbor not in queue_labeled or neighbor not in queue_unlabeled
                 
                 #If the neighbor is unlabeled 
-                if neighbor_not_in_queue and shortest_distance[neighbor] == infinity:
+                if neighbor_not_in_queue and shortest_distance[neighbor] <= infinity:
                     queue_unlabeled.append(neighbor)
                  
                 #If the neighbor is temporarily labeled
